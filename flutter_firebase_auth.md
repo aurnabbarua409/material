@@ -1,4 +1,6 @@
 # Firebase Auth
+
+<ul>
 <li> Install firebase CLI </li>
 
 ```bash
@@ -63,5 +65,5 @@ await Firebase.initializeApp(
 );
 runApp(const MyApp());
 ```
-
+</ul>
 
