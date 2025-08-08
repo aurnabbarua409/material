@@ -12,13 +12,13 @@ if you get error, check this url in system path:
 ```txt
 C:\Users\Aurnab_Barua\AppData\Roaming\npm
 ```
-<li> run: </li>
+<li> login with firebase </li>
 
 ```bash
 firebase login
 ```
 
-<li> run:
+<li> activate flutterfire_cli
 </li>
 
 ```bash
@@ -26,7 +26,7 @@ dart pub global activate flutterfire_cli
 ```
 
 
-<li> run </li>
+<li> configure flutterfire </li>
 
 ```bash
 flutterfire configure
@@ -37,13 +37,13 @@ if you get error: check this in system path:
 C:\Users\Aurnab_Barua\AppData\Local\Pub\Cache\bin
 ```
 
-<li> run </li>
+<li> add firebase_core in your project </li>
 
 ```bash
 flutter pub add firebase_core
 ```
 
-<li> run again </li>
+<li> configure flutterfire again </li>
 
 ```bash
 flutterfire configure
@@ -56,7 +56,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 ```
 
-<li> then </li>
+<li> write this code in main function </li>
 
 ```dart
 WidgetsFlutterBinding.ensureInitialized();
