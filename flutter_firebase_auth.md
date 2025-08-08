@@ -18,7 +18,7 @@ C:\Users\Aurnab_Barua\AppData\Roaming\npm
 firebase login
 ```
 
-<li> then run:
+<li> run:
 </li>
 
 ```bash
@@ -37,13 +37,13 @@ if you get error: check this in system path:
 C:\Users\Aurnab_Barua\AppData\Local\Pub\Cache\bin
 ```
 
-<li> then, run </li>
+<li> run </li>
 
 ```bash
 flutter pub add firebase_core
 ```
 
-<li> Then run again </li>
+<li> run again </li>
 
 ```bash
 flutterfire configure
