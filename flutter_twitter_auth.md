@@ -2,7 +2,7 @@
 
 <ol>
 <li>Add firebase to your project.</li>
-<li>Create a develop account in twitter and create an app.</li>
+<li>Create a developer account in twitter and create an app.</li>
 <li>Add twitter in firebase</li>
 <li>Then, write this code in a mehod</li>
 
