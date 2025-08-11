@@ -1,32 +1,42 @@
-# Sample make pdf and write table data
+# Create pdf and write table data there
 
 ```dart
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'dart:io';
+```
+```dart
+ void createPdfWithTable() async {
+    final pdf = pw.Document();
 
-void createPdfWithTable() async {
-  final pdf = pw.Document();
+    pdf.addPage(
+      pw.Page(
+        build: (context) {
+          return pw.Center(
+            child: pw.TableHelper.fromTextArray(
+              headers: ['Name', 'Age', 'City'],
+              data: [
+                ['Alice', '25', 'New York'],
+                ['Bob', '30', 'Chicago'],
+                ['Charlie', '22', 'San Francisco'],
+              ],
+            ),
+          );
+        },
+      ),
+    );
 
-  pdf.addPage(
-    pw.Page(
-      build: (context) {
-        return pw.Center(
-          child: pw.Table.fromTextArray(
-            headers: ['Name', 'Age', 'City'],
-            data: [
-              ['Alice', '25', 'New York'],
-              ['Bob', '30', 'Chicago'],
-              ['Charlie', '22', 'San Francisco'],
-            ],
-          ),
-        );
-      },
-    ),
-  );
+    final outputDir = await getApplicationDocumentsDirectory();
 
-  final file = File('table_example.pdf');
-  await file.writeAsBytes(await pdf.save());
-}
+    // Construct the full file path
+    final filePath = '${outputDir.path}/table_example.pdf';
 
+    final file = File(filePath);
+    await file.writeAsBytes(await pdf.save());
+
+    print('PDF saved at $filePath');
+    final result = await OpenFile.open(filePath);
+    print('Open file result: ${result.message}');
+  }
 ```
