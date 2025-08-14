@@ -4,6 +4,11 @@
 <li>Add firebase to your project.</li>
 <li>Create a developer account in twitter and create an app.</li>
 <li>Add twitter in firebase</li>
+<li> Run this to install package </li>
+
+```bash
+flutter pub add twitter_login
+```
 <li>Then, write this code in a mehod</li>
 
 ```dart
